@@ -1,0 +1,545 @@
+/* BODY */
+* {
+    box-sizing: border-box;
+  }*
+  
+html {
+  font-size: 100%;
+}
+
+body {
+  /*font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;*/
+  font-size: 1.2rem; /*tamaño de las letras*/
+  line-height: 1.6em; /* interlineado */  
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+ 
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.3em;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+/* PARRAFOS */
+p {
+  margin-bottom: 1.6em; /*margen inferior funciona como enter entre parrafos*/
+}
+
+a {
+  color: #b8cff0;
+  text-decoration: none;
+}
+/* Aqui arranca la CABECERA */
+.header {
+  background: rgb(26, 26, 26);
+  color: rgb(201, 25, 25);
+  padding: 1.5rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 5999;
+}
+
+.header a {
+  color: rgb(179, 179, 179);
+  text-decoration: none;
+}
+
+.container-cabecera {
+  display: grid;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr;
+  grid-template-areas: 
+  "cabecera-izq btn-menu"
+  "menu .";
+}
+
+.cabecera-izq{
+  grid-area: cabecera-izq;  /*GRID*/
+  display: flex;
+  align-items: center;
+}
+
+/* logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+#your {
+  letter-spacing: 1px;
+  font-size: 2em;  
+  font-style:oblique;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+#car{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: #ca0303;
+  letter-spacing: 3px;
+  font-size: 2em;
+  font-weight: bold;
+  font-style:oblique;
+}
+
+.imagen {
+  width: 100%;
+  height: 100%;
+}
+
+/* boton "menú" */
+.btn_menu{
+  grid-area: btn-menu;  /*GRID*/
+  color: rgb(179, 179, 179);
+  padding: 15px;
+  background-color: rgb(39, 39, 39);
+  border-radius: 10px;
+  margin-right: 10%;
+}
+
+.btn_menu a{
+  color: rgb(179, 179, 179);
+  text-decoration: none;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+.menu {
+  grid-area: menu;  /*GRID*/
+  margin-right: 2vw;
+  /*display: flex;*/
+  background-color: rgb(26, 26, 26); 
+  width: 50%;
+}
+
+ul.navigation {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+}
+
+.btn-detalle{
+  text-align: center;
+  padding: 0.5em;
+}
+/* todos los "ul" que esten dentro de "menu" */
+
+img{
+  height: auto;
+  width: auto;
+}
+
+/* si tiene tambien la clase show */
+ul.navigation.show {
+  display: flex;
+}
+
+ul.navigation li {
+  list-style: none;
+  margin: 0px 0px;
+  padding: 10px 20px;
+}
+
+ul.navigation li a {
+  text-decoration: none;
+  color: #B3B3B3;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+}
+
+ul.navigation li:hover {
+  color:#fff;
+  background-color:#5c636a;
+  border-radius: 5px;
+}
+
+.btn {
+  line-height: 2.6;
+  /*border:none;*/
+  border-color: black;
+  font-size: 1rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-secondary {
+  color: #B3B3B3;
+  background: rgb(26, 26, 26);
+}
+
+.btn-check:focus+.btn-secondary,.btn-secondary:focus {
+  color: rgb(179, 179, 179);
+  background-color: #353535;
+  border-color:rgb(27,27,27);
+  box-shadow: 0 0 0 0.25rem rgb(27 27 27);
+}
+
+.btn-AddComment{
+  text-align: center;
+}
+
+.btn-comment{
+  padding: 6px 70px;
+}
+
+.btn-back{
+  padding: 6px 40px;
+}
+
+.dropdown-menu, .dropdown-menu-dark{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.dropdown-menu-dark .dropdown-divider {
+  border-color: rgba(180, 177, 177, 0.5);
+}
+
+.catalogo{
+  text-align: center;
+}
+
+.carousel-caption, .d-none, .d-md-block{
+  opacity: .7;
+  color:#b30b0b;
+  border-radius: 5px;
+  background-color: #cfc5c5;
+  font-weight: bolder;
+}
+
+.carousel {
+  /*margin-bottom: 10rem;*/
+  margin-top: 10rem;
+  width:640px;
+  height:360px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.password-icon {
+  float: right;
+  position: relative;
+  margin: -25px 10px 0 0;
+  cursor: pointer;
+}
+
+fieldset{
+  border: 1px solid;
+}
+
+.lgnd-danger {
+  font-size: 140%;
+  float: unset;
+  width: auto;
+  color:#e40a0a;
+  font-weight:bolder;
+}
+
+.subFilterContainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr 6fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "btn-back . filter btn-filter";
+}
+
+.btnBack{
+  grid-area: btn-back;  /*GRID*/
+}
+
+.labelFilter{
+  grid-area: filter;  /*GRID*/
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+.filterRadio{
+  grid-area: filter;  /*GRID*/
+  display: flex;
+  text-align: end;
+  justify-content: end;
+  background-color: darkgrey;
+  border-radius: 5px;
+}
+
+.filterInnerRadio{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-check{
+  margin-bottom: 0;
+}
+
+.filterButton{
+  grid-area: btn-filter;  /*GRID*/
+  text-align: end;
+}
+
+.userLogged{
+  text-align: end;
+  font-size: 80%;
+  color: rgb(217 216 216);
+  margin-right: 3vmin;
+  background-color: gray;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+/* TERMINA VEHICULOS DESTACADOS */
+
+/*------------ TERMINA HOME ------------*/ 
+
+/*------------ EMPIEZA CATALOGO ------------*/ 
+
+/* TABLAS CATALOGO */
+
+th {
+  background-color: grey;
+  color:rgb(179, 179, 179);
+}
+
+/* se definen las propiedades de la tabla */
+tbody {
+  color: black;
+}
+
+tfoot {
+  color: red;
+}
+
+table, td, tr, th {
+  border: 1px solid white;
+  border-collapse: collapse;
+  text-align:center;
+  font-size: small;
+}
+
+
+table {
+  width: 100%;
+  margin: 0px auto;
+  background-color: rgb(179, 179, 179);
+  font: icon;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: white;
+  text-align: center;
+  background-color:rgb(240, 4, 4);
+  border-radius: .25rem;
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+} 
+
+
+/* ------------ EMPIEZA CONTACTO ------------*/ 
+
+/* Datos de la empresa */
+.container {
+  display: grid;
+  margin-bottom: 5rem;
+  grid-template-rows: 4fr;
+  grid-template-areas: 
+  "."
+  "seccionNuestrosDatos"
+  "seccionFormContacto"
+  "ubicacion";
+}
+
+.container h1 {
+  font-size: 1.3em;
+  margin-top: 6em;
+  margin-bottom: 1.3em;
+  text-align: center;
+  color:#333;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.modalContainer, .modalContainerCargar, .modalContainerEdicion, .modalContainerMensaje, .modalContainerBuscar{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;  
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.mostrar {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.ocultar {
+  display: none;
+}
+
+.modal {
+  background-color: #fff;
+  width: 600px;
+  max-width: 90%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modalPedido, .modalEdicionPedido, .modalMsge, .modalBuscarPedido {
+  background-color: #fff;
+  width: 600px;
+  max-width: 90%;
+  padding: 30px 50px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin-top:40px;
+}
+
+.modalMsge h2{
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.modal h1 {
+  color: #333;
+  margin: 0;
+}
+
+.modal p {
+  color:#335;
+  opacity: 0.7;
+  font-size: 17px;
+}
+/*Fin ventana modal*/  
+
+/*Final formulario de contacto*/
+
+/* ------------ TERMINA CONTACTO ------------*/ 
+  
+/* PIE DE PAGINA */
+.footer {
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  background: rgb(26, 26, 26);
+  color: rgb(201, 25, 25);
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 5999;
+}
+
+#car2, .pie-de-pagina {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  width: 80%;
+}
+
+#car2{
+  color: #e40a0a;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.pie-de-pagina{
+  color:azure;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+/* TERMINA PIE DE PAGINA */
+
+
+/* ------------ DESKTOP ------------*/ 
+@media screen and (min-width: 600px) {
+    /* en desktop ocultamos siempre el boton del menu */
+    .btn_menu {
+        display: none;
+    }
+
+    .imagen {
+      margin-left: 1rem;
+    }
+
+    #your {
+      margin-left: 2rem;
+    }
+
+    .container-cabecera { /*GRID*/
+      display: grid;
+      justify-content: space-between;
+      align-items: center;
+      grid-template-columns: 3fr 1fr;
+      grid-template-areas: 
+      "cabecera-izq menu .";
+    }
+
+    /* cambiamos la direccion del flex */
+    ul.navigation {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    th, td {
+      font-size: 1.3em;
+      height: 30px;
+      font-weight: bolder;
+    }
+
+    .modalPedido, .modalEdicionPedido {
+      width: auto;
+      max-width: 80%;
+    }
+    
+    
+    /*CONTACTO*/
+    .container {
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-areas:
+      "."
+      "seccionNuestrosDatos"
+      "seccionFormContacto"
+      "ubicacion";
+    }
+
+    
+    .container h1 {
+      font-size: 3em;
+      margin-top: 12%;
+      margin-bottom: 4%;
+    }
+
+
+
+        
+    /*Ventana modal*/
+    .modal {
+      max-width: 100%;
+    }
+    /*fin ventana modal*/
+    /*FIN CONTACTO*/
+}
