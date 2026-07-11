@@ -1,0 +1,11 @@
+1- Collection.sort utiliza internamente TimSort:
+Es un algoritmo híbrido: Combina lo mejor del Ordenamiento por Inserción (Insertion Sort) y del Ordenamiento por Mezcla (Merge Sort).
+
+2. ¿Qué características deben cumplir los elementos para poder ordenarse?
+Java no es adivino; si creas una clase personalizada (por ejemplo, una clase Empleado), 
+Java no sabe si quieres ordenarlos por su sueldo, por edad o por abecedario en su nombre.  
+Para que Collections.sort() acepte una lista, los elementos dentro de ella deben cumplir 
+obligatoriamente con una de estas dos opciones:  
+
+Opción A: Implementar la interfaz Comparable (Orden Natural)
+Opción B: Proveer un Comparator externo  

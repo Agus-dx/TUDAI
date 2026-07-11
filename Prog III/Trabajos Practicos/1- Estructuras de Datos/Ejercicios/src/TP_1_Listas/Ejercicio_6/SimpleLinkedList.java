@@ -2,7 +2,7 @@ package TP_1_Listas.Ejercicio_6;
 
 import java.util.Iterator;
 
-public class SimpleLinkedList<T extends Comparable<T>> implements Iterable<T>{
+public class SimpleLinkedList<T> implements Iterable<T>{
     private Node<T> cabeza;
     private int longitud;
 
@@ -223,7 +223,7 @@ public class SimpleLinkedList<T extends Comparable<T>> implements Iterable<T>{
      * Complejidad: O(n * m)  donde n = tamaño de lista1, m = tamaño de lista2
      * (usamos indexOf para buscar en la segunda lista)
      */
-    public static <T extends Comparable<T>> SimpleLinkedList<T> diferencia(
+    public static <T> SimpleLinkedList<T> diferencia(
             SimpleLinkedList<T> lista1, SimpleLinkedList<T> lista2) {
 
         SimpleLinkedList<T> resultado = new SimpleLinkedList<>();

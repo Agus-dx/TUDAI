@@ -16,6 +16,8 @@ public class Ejercicio2 {
         }
 
         int medio = inicio + (fin - inicio) / 2; // Evita overflow
+        System.out.println("Medio actual: " + medio + "val: " + A[medio]);
+
 
         if (A[medio] == clave) {
             return medio;                       // Elemento encontrado
